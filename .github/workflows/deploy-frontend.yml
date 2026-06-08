@@ -1,0 +1,42 @@
+name: Deploy Frontend to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        working-directory: capstone.web
+        run: npm ci
+
+      - name: Inject API URL
+        working-directory: capstone.web
+        run: sed -i "s|RAILWAY_API_URL|${{ secrets.API_URL }}|g" src/environments/environment.prod.ts
+
+      - name: Build
+        working-directory: capstone.web
+        run: npx ng build --configuration production
+
+      - name: Fix SPA routing (GitHub Pages 404 fallback)
+        run: cp capstone.web/dist/capstone.web/index.html capstone.web/dist/capstone.web/404.html
+
+      - name: Add custom domain
+        run: echo "${{ secrets.CNAME_DOMAIN }}" > capstone.web/dist/capstone.web/CNAME
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: capstone.web/dist/capstone.web

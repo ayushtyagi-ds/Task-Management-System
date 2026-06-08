@@ -1,0 +1,15 @@
+# Node
+capstone.web/node_modules/
+capstone.web/dist/
+capstone.web/.angular/
+
+# .NET
+capstone.web.api/bin/
+capstone.web.api/obj/
+
+# macOS
+.DS_Store
+
+# Secrets
+*.env
+appsettings.Local.json
