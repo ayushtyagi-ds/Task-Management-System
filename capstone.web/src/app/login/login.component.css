@@ -3,7 +3,7 @@
   height: 100vh;
   width: 100vw;
   overflow: hidden;
-  font-family: 'Avenir', 'Segoe UI', sans-serif;
+  font-family: system-ui, 'Segoe UI', sans-serif;
 }
 
 /* Left panel */

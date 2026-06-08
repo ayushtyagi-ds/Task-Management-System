@@ -1,4 +1,45 @@
-.mat-accent {
-  background-color: #4caf50 !important; /* Custom green */
-  color: white !important; /* Ensure good contrast */
+.container {
+  padding: 28px 32px;
+  max-width: 1100px;
+  font-family: system-ui, 'Segoe UI', sans-serif;
+}
+
+/* Toolbar above table */
+.table-toolbar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+/* Table */
+table[mat-table] {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* Remove inline p-tag padding overrides */
+td.mat-mdc-cell p,
+td[mat-cell] p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Action buttons */
+td.mat-mdc-cell button,
+td[mat-cell] button {
+  font-size: 0.82rem;
+  padding: 4px 14px;
+  min-width: unset;
+  height: 30px;
+  line-height: 30px;
+}
+
+.mat-accent,
+button[color="accent"] {
+  background-color: #2e7d32 !important;
+  color: #fff !important;
 }

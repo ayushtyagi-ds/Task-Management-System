@@ -1,28 +1,62 @@
-/* You can add global styles to this file, and also import other style files */
+/* Global styles */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, 'Segoe UI', sans-serif;
+  background-color: #f5f6fa;
+  color: #333;
+  box-sizing: border-box;
+}
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+*, *::before, *::after {
+  box-sizing: inherit;
+}
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
+/* Brand color utilities */
 .brand-color-blue {
-    color: #c00202 !important;
+  color: #c00202 !important;
 }
 
 .brand-background-color-blue {
-    background-color: #c00202 !important;
+  background-color: #c00202 !important;
 }
 
+/* Angular Material global overrides */
+.mat-mdc-raised-button.mat-primary {
+  --mdc-protected-button-container-color: #c00202;
+  --mdc-protected-button-label-text-color: #fff;
+}
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.mat-mdc-raised-button.mat-accent {
+  --mdc-protected-button-container-color: #2e7d32;
+  --mdc-protected-button-label-text-color: #fff;
+}
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+/* Table global styles */
+.mat-mdc-table {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08) !important;
+}
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.mat-mdc-header-row {
+  background-color: #c00202 !important;
+}
+
+.mat-mdc-header-cell {
+  color: #fff !important;
+  font-weight: 600 !important;
+  font-size: 0.85rem !important;
+  letter-spacing: 0.3px;
+}
+
+.mat-mdc-row:hover {
+  background-color: #fef5f5 !important;
+}
+
+.mat-mdc-cell {
+  font-size: 0.9rem;
+  color: #444;
+}

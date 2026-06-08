@@ -1,8 +1,40 @@
-<div class="button-container shadow-sm p-3">
-  <button class="btn btn-light btn-block mb-2"  routerLink="/categories">Categories</button>
-  <button class="btn btn-light btn-block mb-2" routerLink="/prioritys">Priorities</button>
-  <button class="btn btn-light btn-block mb-2" routerLink="/users">Users</button>
-  <button class="btn btn-light btn-block mb-2" routerLink="/quests">Quests</button>
-  <button class="btn btn-light btn-block mb-2" routerLink="/statuses">Status</button>
-  <button class="btn btn-outline-danger btn-block" href="#" (click)="logout()">Logout</button>
-</div>
+<nav class="sidebar-nav">
+  <div class="nav-brand">
+    <span class="nav-brand-text">Task Manager</span>
+  </div>
+  <ul class="nav-list">
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/quests" routerLinkActive="active">
+        <span class="nav-icon">&#9776;</span>
+        <span>Tasks</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/categories" routerLinkActive="active">
+        <span class="nav-icon">&#9632;</span>
+        <span>Categories</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/prioritys" routerLinkActive="active">
+        <span class="nav-icon">&#9650;</span>
+        <span>Priorities</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/statuses" routerLinkActive="active">
+        <span class="nav-icon">&#9679;</span>
+        <span>Statuses</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/users" routerLinkActive="active">
+        <span class="nav-icon">&#9786;</span>
+        <span>Users</span>
+      </a>
+    </li>
+  </ul>
+  <div class="nav-footer">
+    <button class="logout-btn" (click)="logout()">Logout</button>
+  </div>
+</nav>

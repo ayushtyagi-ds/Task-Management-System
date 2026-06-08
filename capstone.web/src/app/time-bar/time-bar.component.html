@@ -1,14 +1,10 @@
-<div class="header-nav">
-    <div class="list">
-      <div class="item-link">
-        <!-- Dynamic weekday -->
-        <div class="wednesday">{{ dayOfWeek }}</div>
-      </div>
-      <!-- Dynamic Date -->
-      <div class="div">{{ currentDate }}</div>
-      <!-- Dynamic Time -->
-      <div class="div1">{{ currentTime }}</div>
-      <img class="list-child" alt="" src="../../assets/bellSimple.svg" />
-    </div>
-    <img class="final-logo-1-icon" alt="" src="../../assets/final_logo.png" />
+<div class="time-bar">
+  <div class="time-bar-items">
+    <span class="time-label">{{ dayOfWeek }}</span>
+    <span class="time-separator">|</span>
+    <span class="time-label">{{ currentDate }}</span>
+    <span class="time-separator">|</span>
+    <span class="time-label">{{ currentTime }}</span>
   </div>
+  <img class="bell-icon" alt="notifications" src="../../assets/bellSimple.svg" />
+</div>

@@ -1,41 +1,48 @@
-
-.container { 
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    /* align-items: center; */
-    /* height: 100vh; Center vertically in the viewport */
-}
-
-.form-container {
-    display: flex;
-    flex-direction: column;
-    width: 100%; /* Full width for responsiveness */
-    max-width: 400px; /* Limit the max width */
+.container {
+  display: flex;
+  justify-content: center;
+  padding: 40px 24px;
+  font-family: system-ui, 'Segoe UI', sans-serif;
+  min-height: 100%;
 }
 
 .form-border {
-border: 2px solid #007bff; /* Border color and width */
-border-radius: 8px; /* Rounded corners */
-padding: 20px; /* Padding inside the border */
+  background: #fff;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  padding: 32px;
+  width: 100%;
+  max-width: 520px;
 }
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
 .full-width {
-width: 100%; /* Make form fields full width */
-margin-bottom: 16px; /* Space between fields */
+  width: 100%;
+  margin-bottom: 4px;
 }
+
 .large-input {
-font-size: 20px; /* Larger text in input */
-padding: 16px; /* More padding for bigger input */
-min-height: 48px; /* Minimum height for input fields */
+  font-size: 1rem;
 }
+
 .button-container {
-display: flex;
-justify-content: space-between;
-width: 100%;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid #f0f0f0;
 }
 
 .large-button {
-font-size: 20px; /* Larger text on buttons */
-padding: 12px 24px; /* More padding for bigger buttons */
-margin: 8px; /* Space between buttons */
+  font-size: 0.92rem;
+  padding: 8px 20px;
+  flex: 1;
+  min-width: 90px;
 }
