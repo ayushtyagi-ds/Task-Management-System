@@ -1,12 +1,6 @@
-<header>
-    <app-time-bar></app-time-bar>
-</header>
-<body>
-    <div>
-        <h1 class="sticky-header">USERNAME</h1>
-    </div>
-    <main>
-        <mat-drawer-container class="dashboard-container">
+<div class="dashboard-wrapper">
+    <h1 class="sticky-header">Task Management System</h1>
+    <mat-drawer-container class="dashboard-container">
             <!-- Sidebar Navigation -->
             <mat-drawer class="sidebar" mode="side" opened>
               <app-navigation></app-navigation>
@@ -45,7 +39,7 @@
                         <tr mat-row *matRowDef="let quest; columns: displayedColumns"></tr>
                     </table> -->
 
-                    <div class="dashboard-container">
+                    <div class="kanban-board">
                          <!-- New Quests -->
                          <div class="status-column" cdkDropList [cdkDropListData]="newQuests" id="new" (cdkDropListDropped)="drop($event)">
                           <h3>New</h3>
@@ -101,8 +95,7 @@
                 </main>
             </mat-drawer-content>
           </mat-drawer-container>
-    </main>
-</body>
+</div>
 
 
 
