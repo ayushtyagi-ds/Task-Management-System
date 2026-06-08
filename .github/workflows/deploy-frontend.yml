@@ -27,7 +27,7 @@ jobs:
 
       - name: Build
         working-directory: capstone.web
-        run: npx ng build --configuration production
+        run: npx ng build --configuration production --base-href /
 
       - name: Fix SPA routing (GitHub Pages 404 fallback)
         run: cp capstone.web/dist/capstone.web/index.html capstone.web/dist/capstone.web/404.html
